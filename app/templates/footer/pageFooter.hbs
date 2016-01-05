@@ -1,0 +1,13 @@
+{{#if meta.support}}
+<aside class="lo-full padding-off">
+  <ul class="footer-view list list-inline">
+    {{#each meta}}
+    {{#if url}}
+    <li><a href="{{url}}">{{name}}</a></li>
+    {{else}}
+    <li>{{name}}</li>
+    {{/if}}
+    {{/each}}
+  </ul>
+</aside>
+{{/if}}
