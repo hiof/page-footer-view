@@ -1,9 +1,9 @@
-{{#if meta.support}}
+{{#if meta}}
 <aside class="lo-full padding-off">
-  <ul class="footer-view list list-inline">
+  <ul class="page-footer-view list list-inline">
     {{#each meta}}
     {{#if url}}
-    <li><a href="{{url}}">{{name}}</a></li>
+    <li><a href="{{url}}" class="btn btn-primary btn-line">{{name}}</a></li>
     {{else}}
     <li>{{name}}</li>
     {{/if}}
