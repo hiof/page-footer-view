@@ -5,7 +5,7 @@ class PageFooter {
       "meta": [
         {
           "name": "Ofte stilte spørsmål",
-          "url": "/studier/opptak/slik-soker-du-opptak/ofte-stilte-sporsmal"
+          "url": "/studier/slik-soker-du-opptak/ofte-stilte-sporsmal"
         },
         {
           "name": "Samordna opptak logg inn",
@@ -21,7 +21,7 @@ class PageFooter {
         },
         {
           "name": "Kontakt opptakskontoret",
-          "url": "/studier/opptak/kontakt-opptakskontoret"
+          "url": "/studier/slik-soker-du-opptak/kontakt-opptakskontoret"
         }
       ]
     };
