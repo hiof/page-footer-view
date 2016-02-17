@@ -2,28 +2,54 @@ class PageFooter {
   constructor() {
     this.ln = $('html').attr('lang');
     this.mydata = {
-      "meta": [
-        {
-          "name": "Ofte stilte spørsmål",
-          "url": "/studier/slik-soker-du-opptak/ofte-stilte-sporsmal"
-        },
-        {
-          "name": "Samordna opptak logg inn",
-          "url": "http://www.samordnaopptak.no/info/"
-        },
-        {
-          "name": "Søknadsweb logg inn",
-          "url": "https://fsweb.no/soknadsweb/login.seam?inst=hiof"
-        },
-        {
-          "name": "EVUWeb logg inn",
-          "url": "https://fsweb.no/evuweb/Kursoversikt.seam?inst=hiof"
-        },
-        {
-          "name": "Kontakt opptakskontoret",
-          "url": "/studier/slik-soker-du-opptak/kontakt-opptakskontoret"
-        }
-      ]
+      "en": {
+        "meta": [
+          {
+            "name": "Frequently asked questions",
+            "url": "/studies/admission/frequently-asked-questions"
+          },
+          {
+            "name": "Norwegian Universities and Colleges admission service login",
+            "url": "http://www.samordnaopptak.no/info/"
+          },
+          {
+            "name": "SøknadsWeb login",
+            "url": "https://fsweb.no/soknadsweb/login.seam?inst=hiof"
+          },
+          {
+            "name": "EVUWeb login",
+            "url": "https://fsweb.no/evuweb/Kursoversikt.seam?inst=hiof"
+          },
+          {
+            "name": "Contact admission office",
+            "url": "/studier/slik-soker-du-opptak/kontakt-opptakskontoret"
+          }
+        ]
+      },
+      "nb":{
+        "meta": [
+          {
+            "name": "Ofte stilte spørsmål",
+            "url": "/studier/slik-soker-du-opptak/ofte-stilte-sporsmal"
+          },
+          {
+            "name": "Samordna opptak logg inn",
+            "url": "http://www.samordnaopptak.no/info/"
+          },
+          {
+            "name": "SøknadsWeb logg inn",
+            "url": "https://fsweb.no/soknadsweb/login.seam?inst=hiof"
+          },
+          {
+            "name": "EVUWeb logg inn",
+            "url": "https://fsweb.no/evuweb/Kursoversikt.seam?inst=hiof"
+          },
+          {
+            "name": "Kontakt opptakskontoret",
+            "url": "/studier/slik-soker-du-opptak/kontakt-opptakskontoret"
+          }
+        ]
+      }
     };
   }
   getData(){
@@ -36,7 +62,7 @@ class PageFooter {
   render(pageCategory){
     //console.log(pageCategory);
     let templateSource = Hiof.Templates['footer/pageFooter'],
-    markup = templateSource(this.mydata);
+    markup = templateSource(this.mydata[this.ln]);
     //console.log(this.mydata);
     $('#content').append(markup);
   }
