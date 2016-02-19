@@ -5,10 +5,6 @@ class PageFooter {
       "en": {
         "meta": [
           {
-            "name": "Frequently asked questions",
-            "url": "/studies/admission/frequently-asked-questions"
-          },
-          {
             "name": "Norwegian Universities and Colleges admission service login",
             "url": "http://www.samordnaopptak.no/info/"
           },
@@ -21,6 +17,10 @@ class PageFooter {
             "url": "https://fsweb.no/evuweb/Kursoversikt.seam?inst=hiof"
           },
           {
+            "name": "Frequently asked questions",
+            "url": "/studies/admission/frequently-asked-questions"
+          },
+          {
             "name": "Contact admission office",
             "url": "/studier/slik-soker-du-opptak/kontakt-opptakskontoret"
           }
@@ -28,10 +28,6 @@ class PageFooter {
       },
       "nb":{
         "meta": [
-          {
-            "name": "Ofte stilte spørsmål",
-            "url": "/studier/slik-soker-du-opptak/ofte-stilte-sporsmal"
-          },
           {
             "name": "Samordna opptak logg inn",
             "url": "http://www.samordnaopptak.no/info/"
@@ -43,6 +39,10 @@ class PageFooter {
           {
             "name": "EVUWeb logg inn",
             "url": "https://fsweb.no/evuweb/Kursoversikt.seam?inst=hiof"
+          },
+          {
+            "name": "Ofte stilte spørsmål",
+            "url": "/studier/slik-soker-du-opptak/ofte-stilte-sporsmal"
           },
           {
             "name": "Kontakt opptakskontoret",
