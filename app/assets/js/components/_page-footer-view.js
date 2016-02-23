@@ -22,7 +22,7 @@ class PageFooter {
           },
           {
             "name": "Contact admission office",
-            "url": "/studier/slik-soker-du-opptak/kontakt-opptakskontoret"
+            "url": "/studies/admission/contact-the-admissions-office"
           }
         ]
       },
