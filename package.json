@@ -1,6 +1,6 @@
 {
   "name": "page-footer-view",
-  "version": "1.2.0-beta.1",
+  "version": "1.2.0-beta.2",
   "author": "HiØ, Kenneth Dahlstrøm <kenneth.dahlstrom@hiof.no>",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-watch": "^0.6.0",
     "grunt-eslint": "^17.3.1",
-    "grunt-sass": "^1.0.0",
+    "grunt-sass": "^1.2.0",
     "grunt-ssh": "^0.11.1",
     "grunt-static-versioning": "^0.2.1",
     "matchdep": "*",
