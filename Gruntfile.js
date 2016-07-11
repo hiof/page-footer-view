@@ -18,7 +18,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
     autoprefixer: {
       options: {
         browsers: ['last 2 versions', 'ie 8', 'ie 9']
@@ -60,6 +59,9 @@ module.exports = function(grunt) {
       }
     },
     clean: {
+      options: {
+        force: true
+      },
       dist: ['dist/**/*'],
       deploy: ['deploy/**/*'],
       build: ['build/**/*']
@@ -103,6 +105,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
+          'build/_view.js': 'vendor/frontend/app/assets/js/components/_view.js',
           'build/_<%= pkg.name %>.js': 'app/assets/js/components/_page-footer-view.js'
         }
       }
@@ -113,9 +116,10 @@ module.exports = function(grunt) {
           'vendor/handlebars/handlebars.js',
           'vendor/pathjs/path.js',
           'build/templates.js',
-          'vendor/detectjs/detect.min.js',
-          'vendor/frontend/app/assets/js/components/__helper.js',
-          'vendor/frontend/app/assets/js/components/__options.js',
+          //'vendor/detectjs/detect.min.js',
+          //'vendor/frontend/app/assets/js/components/__helper.js',
+          //'vendor/frontend/app/assets/js/components/__options.js',
+          'build/_view.js',
           'build/_<%= pkg.name %>.js'
         ],
         dest: 'build/<%= pkg.name %>.v<%= pkg.version %>.min.js'

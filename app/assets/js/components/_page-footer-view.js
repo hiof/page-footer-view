@@ -1,70 +1,32 @@
 class PageFooter {
   constructor() {
-    this.ln = $('html').attr('lang');
-    this.mydata = {
-      "en": {
-        "meta": [
-          {
-            "name": "Norwegian Universities and Colleges admission service login",
-            "url": "http://www.samordnaopptak.no/info/"
-          },
-          {
-            "name": "SøknadsWeb login",
-            "url": "https://fsweb.no/soknadsweb/login.seam?inst=hiof"
-          },
-          {
-            "name": "EVUWeb login",
-            "url": "https://fsweb.no/evuweb/Kursoversikt.seam?inst=hiof"
-          },
-          {
-            "name": "Frequently asked questions",
-            "url": "/studies/admission/frequently-asked-questions"
-          },
-          {
-            "name": "Contact admission office",
-            "url": "/studies/admission/contact-the-admissions-office"
-          }
-        ]
-      },
-      "nb":{
-        "meta": [
-          {
-            "name": "Samordna opptak logg inn",
-            "url": "http://www.samordnaopptak.no/info/"
-          },
-          {
-            "name": "SøknadsWeb logg inn",
-            "url": "https://fsweb.no/soknadsweb/login.seam?inst=hiof"
-          },
-          {
-            "name": "EVUWeb logg inn",
-            "url": "https://fsweb.no/evuweb/Kursoversikt.seam?inst=hiof"
-          },
-          {
-            "name": "Ofte stilte spørsmål",
-            "url": "/studier/slik-soker-du-opptak/ofte-stilte-sporsmal"
-          },
-          {
-            "name": "Kontakt opptakskontoret",
-            "url": "/studier/slik-soker-du-opptak/kontakt-opptakskontoret"
-          }
-        ]
-      }
+    this.view = new View();
+    this.defaults = {
+      // These are the default.
+      id: null,
+      //category: 'admission',
+      url: 'http://hiof.no/api/v1/contact/',
+      //lang: this.view.ln,
     };
   }
-  getData(){
-    let data = {};
-
-    // Mockup data until other pages require similar functionality
-
-    return data;
-  }
-  render(pageCategory){
+  render(options = {}){
     //console.log(pageCategory);
-    let templateSource = Hiof.Templates['footer/pageFooter'],
-    markup = templateSource(this.mydata[this.ln]);
-    //console.log(this.mydata);
-    $('#content').append(markup);
+    options.category = $('#main').attr('data-page-category');
+    let settings = Object.assign(
+      {},
+      this.defaults,
+      options
+    );
+    //console.log('Settings from render');
+    //console.log(settings);
+    let that = this;
+    this.view.getData(settings, that).success(function(data){
+      let templateSource = Hiof.Templates['footer/pageFooter'],
+          markup = templateSource(data);
+      //console.log('Data:');
+      //console.log(data);
+      $('#content').append(markup);
+    });
   }
 }
 
@@ -72,12 +34,15 @@ class PageFooter {
 // On document load
 $(function() {
   //console.log('Hello from PageFooter plugin');
-  let footer = new PageFooter(),
-  pageCategory = $('#main').attr('data-page-category');
-  if (pageCategory == 'admission') {
+  let footer = new PageFooter();
+
+
+
+  footer.render();
+  //if (pageCategory == 'admission') {
     //console.log('pageCategory is admission...');
     //Hiof.getListViewData();
-    footer.render(pageCategory);
-  }
+
+  //}
 
 });

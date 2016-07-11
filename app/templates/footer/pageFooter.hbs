@@ -1,11 +1,11 @@
-{{#if meta}}
+{{#if data}}
 <aside class="lo-full padding-off">
   <ul class="page-footer-view list list-inline">
-    {{#each meta}}
-    {{#if url}}
-    <li><a href="{{url}}" class="btn btn-primary btn-line">{{name}}</a></li>
+    {{#each data}}
+    {{#if attributes.url}}
+    <li><a href="{{attributes.url}}" class="btn btn-primary btn-line">{{attributes.name}}</a></li>
     {{else}}
-    <li>{{name}}</li>
+    <li>{{attributes.name}}</li>
     {{/if}}
     {{/each}}
   </ul>
