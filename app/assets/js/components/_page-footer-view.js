@@ -9,12 +9,8 @@ class PageFooter {
             "url": "http://www.samordnaopptak.no/info/"
           },
           {
-            "name": "SøknadsWeb login",
+            "name": "Søknadsweb login",
             "url": "https://fsweb.no/soknadsweb/login.seam?inst=hiof"
-          },
-          {
-            "name": "EVUWeb login",
-            "url": "https://fsweb.no/evuweb/Kursoversikt.seam?inst=hiof"
           },
           {
             "name": "Frequently asked questions",
@@ -33,12 +29,8 @@ class PageFooter {
             "url": "http://www.samordnaopptak.no/info/"
           },
           {
-            "name": "SøknadsWeb logg inn",
+            "name": "Søknadsweb logg inn",
             "url": "https://fsweb.no/soknadsweb/login.seam?inst=hiof"
-          },
-          {
-            "name": "EVUWeb logg inn",
-            "url": "https://fsweb.no/evuweb/Kursoversikt.seam?inst=hiof"
           },
           {
             "name": "Ofte stilte spørsmål",
